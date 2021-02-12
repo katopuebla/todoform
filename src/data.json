@@ -4,25 +4,25 @@
       "title": "task 1",
       "responsable" : "kato",
       "description": "navegacion",
-      "prioridad" : "low"
+      "priority" : "low"
     },
     {
       "title": "task 2",
       "responsable" : "Juan",
       "description": "navegacion",
-      "prioridad" : "high"
+      "priority" : "high"
     },
     {
       "title": "task 3",
       "responsable" : "Brian",
       "description": "navegacion",
-      "prioridad" : "medium"
+      "priority" : "medium"
     },
     {
       "title": "task 4",
       "responsable" : "Maria",
       "description": "navegacion",
-      "prioridad" : "medium"
+      "priority" : "medium"
     }
   ]
 }
