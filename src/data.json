@@ -17,12 +17,6 @@
       "responsable" : "Brian",
       "description": "navegacion",
       "priority" : "medium"
-    },
-    {
-      "title": "task 4",
-      "responsable" : "Maria",
-      "description": "navegacion",
-      "priority" : "medium"
     }
   ]
 }

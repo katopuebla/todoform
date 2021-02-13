@@ -18,10 +18,15 @@ class App extends Component {
           <div className="card">
             <div className="card-header">
               <h3>{todo.title}</h3>
+              <span className="badge rounded-pill bg-danger ml-2">
+                {todo.priority}
+              </span>
             </div>
             <div className="card-body">
               <p>{todo.description}</p>
-              <p>{todo.responsable}</p>
+              <p>
+                <mark>{todo.responsable}</mark>
+              </p>
             </div>
           </div>
         </div>
@@ -30,14 +35,17 @@ class App extends Component {
 
     return (
       <div>
-        <nav className="navbar navbar-light bg-light">
-          <div className="container">Menu 1</div>
+        <nav className="navbar navbar-dark bg-dark">
+          <a href="" className="text-white">
+            Task
+            <span className="badge rounded-pill bg-light text-dark ml-2">
+              {this.state.todos.length}
+            </span>
+          </a>
         </nav>
         <div className="container">
           <div className="row mt-4">{todos}</div>
         </div>
-        <h1>Hello StackBlitz!</h1>
-        <p>Start editing to see some magic happen :)</p>
       </div>
     );
   }
