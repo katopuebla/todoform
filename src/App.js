@@ -3,6 +3,9 @@ import "./style.css";
 
 import { todos } from "./data.json";
 
+// subComponents
+import TodoForm from "./components/TodoForm";
+
 class App extends Component {
   constructor() {
     super();
@@ -44,7 +47,15 @@ class App extends Component {
           </a>
         </nav>
         <div className="container">
-          <div className="row mt-4">{todos}</div>
+          <div className="row mt-4">
+            <div className="col-md-4 text-center">
+              <TodoForm />
+            </div>
+
+            <div className="col-md-8">
+              <div className="row mt-4">{todos}</div>
+            </div>
+          </div>
         </div>
       </div>
     );

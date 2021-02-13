@@ -11,6 +11,10 @@ class TodoFrom extends Component {
     };
   }
 
+  handleInput(e) {
+    console.log(e.target.value, e.target.name);
+  }
+
   render() {
     return (
       <div className="card">
@@ -19,33 +23,37 @@ class TodoFrom extends Component {
             <input
               type="text"
               name="title"
-              className="text"
+              onChange={this.handleInput}
+              className="form-control"
               placeholder="Title"
             />
           </div>
           <div className="form-group">
             <input
               type="text"
-              name="title"
-              className="text"
-              placeholder="Title"
+              name="reposonsable"
+              onChange={this.handleInput}
+              className="form-control"
+              placeholder="Responsable"
             />
           </div>
           <div className="form-group">
             <input
               type="text"
-              name="title"
-              className="text"
-              placeholder="Title"
+              name="description"
+              onChange={this.handleInput}
+              className="form-control"
+              placeholder="Description"
             />
           </div>
           <div className="form-group">
-            <input
-              type="text"
-              name="title"
-              className="text"
-              placeholder="Title"
-            />
+            <select name="priority" id="priority" 
+            onChange={this.handleInput}
+            className="form-control">
+              <option >low</option>
+              <option >medium</option>
+              <option >high</option>
+            </select>
           </div>
           <button type="submit" className="btn btn-primary">
             save
@@ -55,3 +63,5 @@ class TodoFrom extends Component {
     );
   }
 }
+
+export default TodoFrom;
