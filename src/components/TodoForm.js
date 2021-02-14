@@ -9,16 +9,27 @@ class TodoFrom extends Component {
       description: "",
       priority: "low"
     };
+    this.handleInput = this.handleInput.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInput(e) {
-    console.log(e.target.value, e.target.name);
+    const { value, name } = e.target;
+    this.setState({
+      [name]: value
+    });
+    console.log(this.state);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.onAddTodo(this.state);
   }
 
   render() {
     return (
       <div className="card">
-        <form className="card-body">
+        <form className="card-body" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <input
               type="text"
@@ -47,12 +58,15 @@ class TodoFrom extends Component {
             />
           </div>
           <div className="form-group">
-            <select name="priority" id="priority" 
-            onChange={this.handleInput}
-            className="form-control">
-              <option >low</option>
-              <option >medium</option>
-              <option >high</option>
+            <select
+              name="priority"
+              id="priority"
+              onChange={this.handleInput}
+              className="form-control"
+            >
+              <option>low</option>
+              <option>medium</option>
+              <option>high</option>
             </select>
           </div>
           <button type="submit" className="btn btn-primary">
